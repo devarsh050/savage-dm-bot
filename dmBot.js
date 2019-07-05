@@ -20,14 +20,22 @@ dmBot.on("ready", async () => {
 });
 
 dmBot.on("message", (message) => {
-    
-    
-    if (message.channel.type === "dm") { 
+        
+       
+       
+
+
+
+
+        if (message.channel.type === "dm") { 
         var args = message.content.split(" ").slice(0)
         var args = args.slice(0).join(" ")
         var BOT_ID = dmBot.user.id
         var userID = message.author.id
-        if (message.content.startsWith(config.PREFIX)) return message.channel.send(":x: Please use commands in real server! :x:") 
+        if (message.content.startsWith(!help)) return message.channel.send("HELP_MESSAGE") 
+            ```
+           !dm <@mentioned> <Message>
+            ```
         if (message.author.bot) return;
         message.channel.send("This message has been send to the staff! :incoming_envelope:").then(msg => msg.delete(3000))
         if (message.content.startsWith(config.PREFIX)) return
