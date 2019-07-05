@@ -32,7 +32,12 @@ dmBot.on("message", (message) => {
         var args = args.slice(0).join(" ")
         var BOT_ID = dmBot.user.id
         var userID = message.author.id
-        if (message.content.startsWith(!help)) return message.channel.send("HELP_MESSAGE") 
+        ```
+        !help
+        ```
+        if (message.content.startsWith('!help'):
+            await message.channel.send (HELP_MESSAGE) 
+            return 
             ```
            !dm <@mentioned> <Message>
             ```
